@@ -3,16 +3,18 @@ import React from 'react';
 import classes from './Button.module.css';
 
 const Button = (props) => {
-  return (
-    <button
-      type={props.type || 'button'}
-      className={`${classes.button} ${props.className}`}
-      onClick={props.onClick}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </button>
-  );
+    console.log('Button is running')
+
+    return (
+        <button
+            type={props.type || 'button'}
+            className={`${classes.button} ${props.className}`}
+            onClick={props.onClick}
+            disabled={props.disabled}
+        >
+            {props.children}
+        </button>
+    );
 };
 
-export default React.memo(Button); // Doesn't help with optimizing the app, gets function as a prop
+export default React.memo(Button);
