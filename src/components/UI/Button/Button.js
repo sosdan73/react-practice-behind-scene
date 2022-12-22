@@ -15,4 +15,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default React.memo(Button); // Doesn't help with optimizing the app, gets function as a prop
